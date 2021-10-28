@@ -23,6 +23,40 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
+    col1, col2 = st.beta_columns([2,2])
+
+    with col1:
+        with st.beta_expander(" ℹ️ Information", expanded=True):
+            st.write("""
+            Heart guess info [...]
+            """)
+        '''
+        ## How does it work ❓
+        Complete all the parameters and the machine learning model will predict [...] based on various parameters
+        '''
+
+    with col2:
+        st.subheader("Info on the subject :")
+        age = st.number_input("Age", 42)
+        trestbps = st.number_input("trestbps", 42)
+        chol = st.number_input("chol", 42)
+        thalach = st.number_input("thalach", 42)
+        oldpeak = st.number_input("oldpeak", 42)
+        slope = st.number_input("slope", 42)
+        ca = st.number_input("ca", 42)
+        thal = st.number_input("thal", 42)
+
+        feature_list = [age, trestbps, chol, thalach, oldpeak, slope, ca, thal]
+        single_pred = np.array(feature_list).reshape(1,-1)
+
+        if st.button('Predict'):
+            loaded_model = load_model('model.pickle')
+            prediction = loaded_model.predict(single_pred)
+
+            col1.write('''
+                    ## Results 🔍
+                    ''')
+            col1.write(f"{prediction.item()}")
 
 hide_menu_style = """
         <style>
