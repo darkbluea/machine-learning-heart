@@ -60,6 +60,7 @@ def main():
             col1.write('''
                     ## Results 🔍
                     ''')
+            col1.write(f"{prediction}")
             col1.write(f"{prediction.item()}")
 
 hide_menu_style = """
