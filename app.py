@@ -13,6 +13,10 @@ from matplotlib.figure import Figure
 import seaborn as sns
 
 
+def load_model(modelfile):
+        loaded_model = pickle.load(open(modelfile, 'rb'))
+        return loaded_model
+
 st.set_page_config(page_title="Heart Disease", page_icon="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png", layout='centered', initial_sidebar_state="collapsed")
 
 def main():
