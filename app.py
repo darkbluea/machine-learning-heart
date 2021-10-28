@@ -60,7 +60,10 @@ def main():
             col1.write('''
                     ## Results 🔍
                     ''')
-            col1.write(f"{prediction.item()}")
+            if prediction.item() == 0:
+                col1.write("The patient has a heart disease")
+            elif prediction.item() == 1:
+                col1.write("The patient does not have a heart disease")
 
 hide_menu_style = """
         <style>
