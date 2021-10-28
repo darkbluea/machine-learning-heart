@@ -18,7 +18,7 @@ st.set_page_config(page_title="Heart Disease", page_icon="https://www.freeiconsp
 def main():
     html_temp = """
     <div>
-    <h1 style="color:MEDIUMSEAGREEN;text-align:left;"> Heart guess https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png</h1>
+    <h1 style="color:MEDIUMSEAGREEN;text-align:left;"> Heart guess</h1>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
