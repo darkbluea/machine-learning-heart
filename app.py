@@ -26,7 +26,7 @@ def main():
     col1, col2 = st.beta_columns([2,2])
 
     with col1:
-        with st.beta_expander(" ℹ️ Information", expanded=True):
+        with st.expander(" ℹ️ Information", expanded=True):
             st.write("""
             Heart guess info [...]
             """)
