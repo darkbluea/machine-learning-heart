@@ -70,6 +70,8 @@ def main():
         thal = st.number_input("thal", 42)
         sex = st.selectbox("gender", ("male", "female"))
         cp = st.selectbox("type of chest pains", ('asymptomatic', 'atypical angina', 'non-anginal pain', 'typical angina'))
+        fbs = st.selectbox("fasting blood sugar", ('true', 'false'))
+        restecg = st.selectbox("resting electrocardiographic results", ("normal", "abnormal"))
 
         if sex == "male":
             male = 1
@@ -99,7 +101,21 @@ def main():
             cp3 = 0
             cp4 = 1
 
-        feature_list = [age, trestbps, chol, thalach, oldpeak, slope, ca, thal, male, female, cp1, cp2, cp3, cp4]
+        if fbs == "true":
+            fbs1 = 0
+            fbs2 = 1
+        else:
+            fbs1 = 1
+            fbs2 = 0
+
+        if restecg == "normal":
+            r1 = 0
+            r2 = 1
+        else:
+            r1 = 1
+            r2 = 0
+
+        feature_list = [age, trestbps, chol, thalach, oldpeak, slope, ca, thal, female, male, cp1, cp2, cp3, cp4, fbs1, fbs2, r1, r2]
         single_pred = np.array(feature_list).reshape(1,-1)
 
         if st.button('Predict'):
