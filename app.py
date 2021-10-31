@@ -46,7 +46,9 @@ def main():
             """)
         '''
         ## How does it work ❓
-        Complete all the parameters and the machine learning model will predict [...] based on various parameters
+        Simply fill in all the parameters with your or your friends informations and hit predict. The AI will infer if 
+	the information corresponds to a patient with a heart disease or not. Moreover, if you want to test it out, you
+	can just invent values for each parameters and see which result you will get.
         '''
 
     with col2:
