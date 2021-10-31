@@ -69,8 +69,37 @@ def main():
         ca = st.number_input("ca", 42)
         thal = st.number_input("thal", 42)
         sex = st.selectbox("gender", ("male", "female"))
+        cp = st.selectbox("type of chest pains", ('asymptomatic', 'atypical angina', 'non-anginal pain', 'typical angina'))
 
-        feature_list = [age, trestbps, chol, thalach, oldpeak, slope, ca, thal]
+        if sex == "male":
+            male = 1
+            female = 0
+        else:
+            male = 0
+            female = 1
+
+        if cp == "asymptomatic":
+            cp1 = 1
+            cp2 = 0
+            cp3 = 0
+            cp4 = 0
+        if cp == "atypical angina":
+            cp1 = 0
+            cp2 = 1
+            cp3 = 0
+            cp4 = 0
+        if cp == "on-anginal pain":
+            cp1 = 0
+            cp2 = 0
+            cp3 = 1
+            cp4 = 0
+        if cp == "typical angina":
+            cp1 = 0
+            cp2 = 0
+            cp3 = 0
+            cp4 = 1
+
+        feature_list = [age, trestbps, chol, thalach, oldpeak, slope, ca, thal, male, female, cp1, cp2, cp3, cp4]
         single_pred = np.array(feature_list).reshape(1,-1)
 
         if st.button('Predict'):
