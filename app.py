@@ -32,7 +32,17 @@ def main():
     with col1:
         with st.expander(" ℹ️ Information", expanded=True):
             st.write("""
-            Heart guess info [...]
+            With the still growing amount of victims from the covid-19's vaccine,
+	    more and more people are suffering from its side effect. Like any vaccine, 
+	    COVID-19 vaccines can cause mild, short term side effects, such as a 
+	    low-grade fever or pain or redness at the injection site. Most reactions 
+	    to vaccines are mild and go away within a few days on their own. More 
+	    serious or long-lasting side effects to vaccines are also possible. 
+	    One of the more serious and long-lasting side effect is the myocarditis, 
+	    a type of heart disease which affects thousands after the vaccination. 
+	    However it is not the only heart disease possible side effect from the vaccination. 
+	    Therefore we deployed an AI able to identify and/or predict if someone might or 
+	    might not have a heart disease.
             """)
         '''
         ## How does it work ❓
