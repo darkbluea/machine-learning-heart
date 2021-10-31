@@ -129,7 +129,6 @@ def main():
         if st.button('Predict'):
             loaded_model = load_model('model.pickle')
             prediction = loaded_model.predict(single_pred)
-            st.write(prediction)
             col1.write('''
                     ## Results 🔍
                     ''')
