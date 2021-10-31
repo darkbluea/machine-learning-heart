@@ -68,6 +68,7 @@ def main():
         slope = st.number_input("slope", 42)
         ca = st.number_input("ca", 42)
         thal = st.number_input("thal", 42)
+	sex = st.selectbox("gender", ("male, "female"))
 
         feature_list = [age, trestbps, chol, thalach, oldpeak, slope, ca, thal]
         single_pred = np.array(feature_list).reshape(1,-1)
